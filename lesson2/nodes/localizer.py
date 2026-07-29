@@ -39,7 +39,7 @@ class Localizer:
         utm_x, utm_y = self.transformer.transform(msg.latitude, msg.longitude)
         pos_x = utm_x - self.origin_x
         pos_y = utm_y - self.origin_y
-
+        pos_z = msg.height - self.undulation
 
         azimuth_correction = self.utm_projection.get_factors(msg.longitude, msg.latitude).meridian_convergence
         azimuth_rad = math.radians(msg.azimuth - azimuth_correction)
@@ -53,7 +53,6 @@ class Localizer:
         current_pose_msg.header.frame_id = "map"
         current_pose_msg.pose.position.x = pos_x
         current_pose_msg.pose.position.y = pos_y
-        pos_z = msg.height - self.undulation
         current_pose_msg.pose.position.z = pos_z
         current_pose_msg.pose.orientation = orientation
         self.current_pose_pub.publish(current_pose_msg)
