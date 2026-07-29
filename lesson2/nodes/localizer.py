@@ -53,7 +53,8 @@ class Localizer:
         current_pose_msg.header.frame_id = "map"
         current_pose_msg.pose.position.x = pos_x
         current_pose_msg.pose.position.y = pos_y
-        current_pose_msg.pose.position.z = msg.height - self.undulation
+        pos_z = msg.height - self.undulation
+        current_pose_msg.pose.position.z = pos_z
         current_pose_msg.pose.orientation = orientation
         self.current_pose_pub.publish(current_pose_msg)
 
@@ -71,7 +72,7 @@ class Localizer:
         t.child_frame_id = "base_link"
         t.transform.translation.x = pos_x
         t.transform.translation.y = pos_y
-        t.transform.translation.z = msg.height - self.undulation
+        t.transform.translation.z = pos_z
         t.transform.rotation = orientation
         self.br.sendTransform(t)
 
