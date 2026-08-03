@@ -58,6 +58,7 @@ class PurePursuitFollower:
         if self.path_linestring is None or self.distance_to_velocity_interpolator is None:
             steering_angle = 0.0
             linear_velocity = 0.0
+            linear_acceleration = -3.0
         else:
             current_pose = Point([msg.pose.position.x, msg.pose.position.y])
             d_ego_from_path_start = self.path_linestring.project(current_pose)
@@ -76,6 +77,7 @@ class PurePursuitFollower:
             alpha = lookahead_heading - heading
             steering_angle = np.arctan2(2.0 * self.wheel_base * np.sin(alpha), ld)
             linear_velocity = float(self.distance_to_velocity_interpolator(d_ego_from_path_start))
+            linear_acceleration = 0.0
 
 
         vehicle_cmd = VehicleCommand()
@@ -83,7 +85,7 @@ class PurePursuitFollower:
         vehicle_cmd.header.frame_id = "base_link"
         vehicle_cmd.steering_angle = steering_angle
         vehicle_cmd.speed = linear_velocity
-        vehicle_cmd.acceleration = 0
+        vehicle_cmd.acceleration = linear_acceleration
         self.vehicle_cmd_pub.publish(vehicle_cmd)
 
     def run(self):
