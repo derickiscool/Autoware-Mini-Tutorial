@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import numpy as np
+import math
 import rospy
 from threading import Lock
 from shapely.geometry import LineString, Point
@@ -37,7 +37,6 @@ class GlobalPlanner:
             raise RuntimeError('Only "utm" is supported for lanelet2 map loading')
         self.lanelet2_map = load(lanelet2_map_path, projector)
 
-        # TODO 2: Create traffic rules and routing graph.
         traffic_rules = lanelet2.traffic_rules.create(lanelet2.traffic_rules.Locations.Germany,
                                                       lanelet2.traffic_rules.Participants.VehicleTaxi)
         self.graph = lanelet2.routing.RoutingGraph(self.lanelet2_map, traffic_rules)
@@ -87,8 +86,8 @@ class GlobalPlanner:
 
         if self.goal_point is None:
             return
-        distance = np.sqrt((self.current_location.x - self.goal_point.x)**2 +
-                           (self.current_location.y - self.goal_point.y)**2)
+        distance = math.hypot(self.current_location.x - self.goal_point.x,
+                              self.current_location.y - self.goal_point.y)
         if distance < self.distance_to_goal_limit:
             self.publish_lane_from_waypoints_list([])
             rospy.loginfo("%s - goal position reached", rospy.get_name())
@@ -121,9 +120,10 @@ class GlobalPlanner:
 
             cumulative = 0.0
             for i in range(len(waypoints) - 1):
-                a = (waypoints[i].position.x, waypoints[i].position.y)
-                b = (waypoints[i+1].position.x, waypoints[i+1].position.y)
-                seg_len = np.sqrt((b[0] - a[0])**2 + (b[1] - a[1])**2)
+                segment_start = (waypoints[i].position.x, waypoints[i].position.y)
+                segment_end = (waypoints[i+1].position.x, waypoints[i+1].position.y)
+                seg_len = math.hypot(segment_end[0] - segment_start[0],
+                                     segment_end[1] - segment_start[1])
                 if cumulative + seg_len >= projected_distance:
                     waypoints = waypoints[:i+1]
                     new_wp = Waypoint()
