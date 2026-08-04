@@ -36,7 +36,6 @@ class PointsClusterer:
         labels = self.clusterer.fit_predict(points)
 
         points_labeled = np.column_stack((points, labels))
-        # label point 3
         points_labeled = points_labeled[points_labeled[:, 3] != -1]
 
         data = unstructured_to_structured(points_labeled, dtype=np.dtype([
