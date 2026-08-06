@@ -16,7 +16,7 @@ from geometry_msgs.msg import PoseStamped, TwistStamped, Vector3
 
 class SimpleSpeedPlanner:
 
-    def __init__(self):
+    def     __init__(self):
 
         # Parameters
         self.default_deceleration = rospy.get_param("default_deceleration")

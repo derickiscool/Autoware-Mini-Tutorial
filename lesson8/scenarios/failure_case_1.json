@@ -1,0 +1,1006 @@
+{
+  "vehicles": [
+    {
+      "id": 432,
+      "type": "vehicle.ford.mustang",
+      "location": {
+        "x": 20.7690486907959,
+        "y": 148.8060760498047,
+        "z": 34.10056686401367
+      },
+      "rotation": {
+        "pitch": 0.0,
+        "yaw": 67.8844223022461,
+        "roll": 0.0
+      },
+      "speed_km_h": 50,
+      "idle_time_s": 0.0,
+      "waypoints": [],
+      "color": "0,12,58",
+      "ignore_traffic_lights": false,
+      "ignore_stop_signs": false,
+      "ignore_vehicles": true,
+      "max_lat_acc": 3.0,
+      "trigger": {
+        "center": {
+          "x": 14.01386533316007,
+          "y": 131.38071747929138,
+          "z": 33.96316146850586
+        },
+        "radius": 5.0
+      }
+    }
+  ],
+  "timestamp": 1786018242.000704,
+  "map_name": "tartu_demo",
+  "ego_vehicle": {
+    "type": "vehicle.lexus.utlexus",
+    "location": {
+      "x": -27.27976417541504,
+      "y": 50.947967529296875,
+      "z": 36.31515884399414
+    },
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -1.8782581090927124,
+      "roll": 0.0
+    },
+    "role": "ego_vehicle",
+    "ignore_traffic_lights": false,
+    "ignore_stop_signs": false,
+    "ignore_vehicles": true,
+    "max_lat_acc": 3.0,
+    "waypoints": [
+      {
+        "index": 1,
+        "location": {
+          "x": -26.544111251831055,
+          "y": -113.77318572998047,
+          "z": 35.626644134521484
+        },
+        "yaw": -4.193173885345459,
+        "speed_km_h": 40.0,
+        "speed_deviation_km_h": 0,
+        "idle_time_s": 0.0,
+        "auto_generated": false,
+        "is_destination": false
+      },
+      {
+        "index": "destination",
+        "location": {
+          "x": -20.526933670043945,
+          "y": -113.46392059326172,
+          "z": 35.323394775390625
+        },
+        "yaw": 8.0235013961792,
+        "speed_km_h": 40.0,
+        "speed_deviation_km_h": 0,
+        "idle_time_s": 0.0,
+        "auto_generated": false,
+        "is_destination": true
+      }
+    ],
+    "destination_speed_km_h": 40.0
+  },
+  "traffic_light_triggers": [
+    {
+      "center": {
+        "x": 26.121476232368945,
+        "y": 158.96139061942466,
+        "z": 33.89999771118164
+      },
+      "radius": 6.0,
+      "fingerprint": [
+        [
+          220,
+          962,
+          147
+        ]
+      ]
+    },
+    {
+      "center": {
+        "x": 26.147434466928114,
+        "y": 158.96942697537327,
+        "z": 33.89999771118164
+      },
+      "radius": 6.0,
+      "fingerprint": [
+        [
+          254,
+          951,
+          147
+        ],
+        [
+          273,
+          1047,
+          162
+        ]
+      ]
+    },
+    {
+      "center": {
+        "x": 73.11780177324901,
+        "y": 275.4107446318069,
+        "z": 33.90166091918945
+      },
+      "radius": 6.0,
+      "fingerprint": [
+        [
+          441,
+          1449,
+          164
+        ],
+        [
+          456,
+          1443,
+          150
+        ]
+      ]
+    },
+    {
+      "center": {
+        "x": 107.25493591427802,
+        "y": 359.892425755751,
+        "z": 34.51591873168945
+      },
+      "radius": 6.0,
+      "fingerprint": [
+        [
+          547,
+          1695,
+          162
+        ],
+        [
+          566,
+          1685,
+          149
+        ]
+      ]
+    },
+    {
+      "center": {
+        "x": 73.11303756819181,
+        "y": 275.39730925670716,
+        "z": 33.90138626098633
+      },
+      "radius": 6.0,
+      "ids_live": [
+        102
+      ],
+      "ids_reference": [
+        22
+      ],
+      "fingerprint": [
+        [
+          412,
+          1440,
+          149
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Green",
+          "duration_s": 5.0,
+          "duration_ticks": 100
+        },
+        {
+          "color": "Red",
+          "duration_s": 10.0,
+          "duration_ticks": 200
+        },
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": 107.26348739862442,
+        "y": 359.8924259950832,
+        "z": 34.51640701293945
+      },
+      "radius": 6.0,
+      "fingerprint": [
+        [
+          525,
+          1707,
+          149
+        ]
+      ]
+    },
+    {
+      "center": {
+        "x": 211.01547214386525,
+        "y": 761.7826538930718,
+        "z": 36.7233772277832
+      },
+      "radius": 6.0,
+      "ids_live": [
+        122,
+        132
+      ],
+      "ids_reference": [
+        42,
+        52
+      ],
+      "fingerprint": [
+        [
+          625,
+          3195,
+          150
+        ],
+        [
+          628,
+          3226,
+          150
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": 211.01937872772092,
+        "y": 761.7767948380219,
+        "z": 36.723358154296875
+      },
+      "radius": 6.0,
+      "ids_live": [
+        124,
+        125
+      ],
+      "ids_reference": [
+        44,
+        45
+      ],
+      "fingerprint": [
+        [
+          534,
+          3189,
+          150
+        ],
+        [
+          562,
+          3166,
+          150
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": 130.4503819971927,
+        "y": 785.8473367907245,
+        "z": 34.939998626708984
+      },
+      "radius": 6.0,
+      "ids_live": [
+        175,
+        176,
+        177,
+        182
+      ],
+      "ids_reference": [
+        95,
+        96,
+        97,
+        102
+      ],
+      "fingerprint": [
+        [
+          276,
+          2907,
+          155
+        ],
+        [
+          354,
+          2997,
+          153
+        ],
+        [
+          371,
+          2982,
+          166
+        ],
+        [
+          387,
+          2967,
+          153
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": 4.933588437693587,
+        "y": 646.2338314817429,
+        "z": 35.67298889160156
+      },
+      "radius": 6.0,
+      "fingerprint": [
+        [
+          -330,
+          2075,
+          152
+        ],
+        [
+          -309,
+          2067,
+          164
+        ],
+        [
+          -258,
+          2141,
+          152
+        ]
+      ]
+    },
+    {
+      "center": {
+        "x": -156.5548095708558,
+        "y": 216.47637811934464,
+        "z": 34.47370910644531
+      },
+      "radius": 6.0,
+      "ids_live": [
+        226,
+        227
+      ],
+      "ids_reference": [
+        150,
+        151
+      ],
+      "fingerprint": [
+        [
+          -699,
+          475,
+          165
+        ],
+        [
+          -679,
+          489,
+          150
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Red",
+          "duration_s": 18.0,
+          "duration_ticks": 360
+        },
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": -174.1999555827906,
+        "y": 119.27569501320059,
+        "z": 34.66001892089844
+      },
+      "radius": 6.0,
+      "fingerprint": [
+        [
+          -642,
+          278,
+          156
+        ]
+      ]
+    },
+    {
+      "center": {
+        "x": -174.19937133789062,
+        "y": 119.27295684814453,
+        "z": 34.66001892089844
+      },
+      "radius": 2.0,
+      "fingerprint": [
+        [
+          -674,
+          269,
+          167
+        ],
+        [
+          -673,
+          207,
+          155
+        ]
+      ]
+    },
+    {
+      "center": {
+        "x": 5.214141305283672,
+        "y": 645.984461486196,
+        "z": 35.67294692993164
+      },
+      "radius": 6.4,
+      "fingerprint": [
+        [
+          -330,
+          2074,
+          152
+        ],
+        [
+          -309,
+          2066,
+          164
+        ],
+        [
+          -258,
+          2140,
+          152
+        ]
+      ]
+    },
+    {
+      "center": {
+        "x": 29.99553686595641,
+        "y": 167.9546620415721,
+        "z": 33.902069091796875
+      },
+      "radius": 6.0,
+      "ids_live": [
+        88
+      ],
+      "ids_reference": [
+        65
+      ],
+      "fingerprint": [
+        [
+          218,
+          963,
+          146
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Red",
+          "duration_s": 15.0,
+          "duration_ticks": 300
+        },
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": 29.992095102367017,
+        "y": 168.1132881041124,
+        "z": 33.90283203125
+      },
+      "radius": 6.0,
+      "ids_live": [
+        89,
+        90
+      ],
+      "ids_reference": [
+        66,
+        67
+      ],
+      "fingerprint": [
+        [
+          251,
+          950,
+          146
+        ],
+        [
+          273,
+          1047,
+          162
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Red",
+          "duration_s": 15.0,
+          "duration_ticks": 300
+        },
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": 73.13113945540258,
+        "y": 275.2433562064003,
+        "z": 33.901329040527344
+      },
+      "radius": 6.0,
+      "ids_live": [
+        103,
+        104
+      ],
+      "ids_reference": [
+        80,
+        81
+      ],
+      "fingerprint": [
+        [
+          441,
+          1449,
+          163
+        ],
+        [
+          456,
+          1443,
+          149
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Green",
+          "duration_s": 5.0,
+          "duration_ticks": 100
+        },
+        {
+          "color": "Red",
+          "duration_s": 10.0,
+          "duration_ticks": 200
+        },
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": 110.30142807163159,
+        "y": 368.4684765412213,
+        "z": 34.60230255126953
+      },
+      "radius": 6.0,
+      "ids_live": [
+        114
+      ],
+      "ids_reference": [
+        91
+      ],
+      "fingerprint": [
+        [
+          525,
+          1707,
+          148
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Red",
+          "duration_s": 13.0,
+          "duration_ticks": 260
+        },
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": 106.30124570089413,
+        "y": 357.5496368712119,
+        "z": 34.491737365722656
+      },
+      "radius": 6.0,
+      "ids_live": [
+        115,
+        116
+      ],
+      "ids_reference": [
+        92,
+        93
+      ],
+      "fingerprint": [
+        [
+          547,
+          1695,
+          161
+        ],
+        [
+          566,
+          1685,
+          148
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Green",
+          "duration_s": 3.0,
+          "duration_ticks": 60
+        },
+        {
+          "color": "Red",
+          "duration_s": 12.0,
+          "duration_ticks": 240
+        },
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": -6.243839244101114,
+        "y": 631.9362689504571,
+        "z": 35.55111312866211
+      },
+      "radius": 6.0,
+      "ids_live": [
+        188,
+        189
+      ],
+      "ids_reference": [
+        165,
+        166
+      ],
+      "fingerprint": [
+        [
+          -330,
+          2075,
+          156
+        ],
+        [
+          -258,
+          2141,
+          152
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": -6.47295220302955,
+        "y": 631.7669895458598,
+        "z": 35.549530029296875
+      },
+      "radius": 6.0,
+      "ids_live": [
+        190,
+        191
+      ],
+      "ids_reference": [
+        167,
+        168
+      ],
+      "fingerprint": [
+        [
+          -330,
+          2074,
+          151
+        ],
+        [
+          -258,
+          2140,
+          157
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": -95.25025536525278,
+        "y": 447.15914083994625,
+        "z": 34.716033935546875
+      },
+      "radius": 6.0,
+      "ids_live": [
+        74,
+        76
+      ],
+      "ids_reference": [
+        51,
+        53
+      ],
+      "fingerprint": [
+        [
+          -495,
+          1505,
+          155
+        ],
+        [
+          -434,
+          1563,
+          150
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": -94.86173304260679,
+        "y": 446.85916180917764,
+        "z": 34.71704864501953
+      },
+      "radius": 6.0,
+      "ids_live": [
+        78,
+        80
+      ],
+      "ids_reference": [
+        55,
+        57
+      ],
+      "fingerprint": [
+        [
+          -495,
+          1504,
+          155
+        ],
+        [
+          -444,
+          1528,
+          151
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": -173.40250319814086,
+        "y": 138.0678365431153,
+        "z": 34.689903259277344
+      },
+      "radius": 6.0,
+      "ids_live": [
+        209,
+        212,
+        225
+      ],
+      "ids_reference": [
+        186,
+        189,
+        202
+      ],
+      "fingerprint": [
+        [
+          -674,
+          269,
+          167
+        ],
+        [
+          -673,
+          207,
+          155
+        ],
+        [
+          -642,
+          278,
+          156
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": -156.19030616066487,
+        "y": 216.6368538830164,
+        "z": 34.47503662109375
+      },
+      "radius": 6.0,
+      "ids_live": [
+        192,
+        231
+      ],
+      "ids_reference": [
+        449,
+        488
+      ],
+      "fingerprint": [
+        [
+          -716,
+          492,
+          151
+        ],
+        [
+          -701,
+          475,
+          165
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Red",
+          "duration_s": 18.0,
+          "duration_ticks": 360
+        },
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    },
+    {
+      "center": {
+        "x": -95.14378224805816,
+        "y": 446.5057908761767,
+        "z": 34.71937561035156
+      },
+      "radius": 6.0,
+      "ids_live": [
+        75,
+        77,
+        79
+      ],
+      "ids_reference": [
+        332,
+        334,
+        336
+      ],
+      "fingerprint": [
+        [
+          -504,
+          1507,
+          150
+        ],
+        [
+          -502,
+          1542,
+          155
+        ],
+        [
+          -445,
+          1528,
+          151
+        ]
+      ],
+      "sequence": [
+        {
+          "color": "Green",
+          "duration_s": 30000.0,
+          "duration_ticks": 600000
+        }
+      ]
+    }
+  ],
+  "weather_keyframes": [
+    {
+      "route_percentage": 0.0,
+      "cloudiness": 30.0,
+      "precipitation": 0.0,
+      "precipitation_deposits": 0.0,
+      "wind_intensity": 30.0,
+      "sun_azimuth_angle": 360.0,
+      "sun_altitude_angle": 60.0,
+      "fog_density": 0.0,
+      "fog_distance": 0.0,
+      "fog_falloff": 0.20000000298023224,
+      "wetness": 0.0,
+      "scattering_intensity": 0.0,
+      "mie_scattering_scale": 0.0,
+      "rayleigh_scattering_scale": 0.03310000151395798,
+      "dust_storm": 0.0
+    },
+    {
+      "route_percentage": 25.000000000000007,
+      "cloudiness": 100.0,
+      "precipitation": 100.0,
+      "precipitation_deposits": 100.0,
+      "wind_intensity": 100.0,
+      "sun_azimuth_angle": 271.01123046875,
+      "sun_altitude_angle": 20.561798095703125,
+      "fog_density": 50.0,
+      "fog_distance": 92.6966323852539,
+      "fog_falloff": 0.25280898809432983,
+      "wetness": 100.0,
+      "scattering_intensity": 100.0,
+      "mie_scattering_scale": 1.0,
+      "rayleigh_scattering_scale": 1.0,
+      "dust_storm": 100.0
+    },
+    {
+      "route_percentage": 49.99999999999993,
+      "cloudiness": 30.0,
+      "precipitation": 0.0,
+      "precipitation_deposits": 0.0,
+      "wind_intensity": 30.0,
+      "sun_azimuth_angle": 180.0,
+      "sun_altitude_angle": -20.898876190185547,
+      "fog_density": 0.0,
+      "fog_distance": 0.0,
+      "fog_falloff": 0.20000000298023224,
+      "wetness": 0.0,
+      "scattering_intensity": 0.0,
+      "mie_scattering_scale": 0.0,
+      "rayleigh_scattering_scale": 0.03310000151395798,
+      "dust_storm": 0.0
+    },
+    {
+      "route_percentage": 75.0,
+      "cloudiness": 30.0,
+      "precipitation": 0.0,
+      "precipitation_deposits": 0.0,
+      "wind_intensity": 30.0,
+      "sun_azimuth_angle": 88.98876190185547,
+      "sun_altitude_angle": 20.561798095703125,
+      "fog_density": 0.0,
+      "fog_distance": 0.0,
+      "fog_falloff": 0.20000000298023224,
+      "wetness": 0.0,
+      "scattering_intensity": 0.0,
+      "mie_scattering_scale": 0.0,
+      "rayleigh_scattering_scale": 0.03310000151395798,
+      "dust_storm": 0.0
+    },
+    {
+      "route_percentage": 100.0,
+      "cloudiness": 0.0,
+      "precipitation": 0.0,
+      "precipitation_deposits": 0.0,
+      "wind_intensity": 0.0,
+      "sun_azimuth_angle": 0.0,
+      "sun_altitude_angle": 60.674156188964844,
+      "fog_density": 0.0,
+      "fog_distance": 0.0,
+      "fog_falloff": 0.20000000298023224,
+      "wetness": 0.0,
+      "scattering_intensity": 0.0,
+      "mie_scattering_scale": 0.0,
+      "rayleigh_scattering_scale": 0.03310000151395798,
+      "dust_storm": 0.0
+    }
+  ]
+}

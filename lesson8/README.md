@@ -66,10 +66,22 @@ Your framework from the previous lessons is a simplified one. Remember all limit
 5. Commit and push everything, and be ready to demonstrate your failure cases at the practice session
 
 ##### Failure case 1
-...
+**Scenario:** `failure_case_1.json` — a `vehicle.mitsubishi.fusorosa` truck is parked (no route, so it stays at spawn) in the ego's lane ~100 m ahead, with a personal trigger ~40 m before it so it spawns before the ego arrives.
+
+**How it fails:** the ego brakes and comes to a full stop behind the truck, then waits there for the rest of the run. The local planner is longitudinal-only (speed), the pure pursuit follower stays on the fixed global path, and the route planner never plans lane changes, so the ego cannot go around. The run ends in a timeout / route-not-completed failure.
+
+**Proposed fix:** a lateral avoidance / lane-change behaviour planner that detects a stationary obstacle blocking the lane and re-routes around it, instead of only reducing speed.
 
 ##### Failure case 2
-...
+**Scenario:** `failure_case_2.json` — an ambulance (`vehicle.ford.ambulance`) is routed to merge into the ego's lane from the oncoming lane / a side road just a few metres ahead, triggered so the cut-in happens while the ego is already inside its braking distance.
+
+**How it fails:** the ego detects the cutting-in ambulance too late. With `default_deceleration` 1.0 m/s² and `braking_reaction_time` 1.6 s, the required stopping distance exceeds the remaining gap, so a collision is unavoidable.
+
+**Proposed fix:** motion prediction of other actors combined with emergency braking — earlier detection/anticipation of converging trajectories and a higher (emergency) deceleration when a collision is imminent.
 
 ##### Failure case 3
-...
+**Scenario:** `failure_case_3.json` — an existing traffic light on the ego's route is re-timed in VSE (large trigger radius, short green ~2–3 s, then yellow 1 s, red). The sequence starts when the ego enters the trigger circle, so the light turns red right as the ego commits at the stop line.
+
+**How it fails:** the stack only reacts to the light's instantaneous status; it has no notion of the upcoming phase change. When the light turns red the ego is already too close to the stop line to brake in time and crosses on red — a red-light violation. A careful human driver sees the yellow and brakes early.
+
+**Proposed fix:** traffic-light phase prediction / time-to-red logic — anticipate green→yellow→red transitions and start decelerating on yellow or on a looming red, not only when the red is already active.
